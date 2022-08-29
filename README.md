@@ -2,6 +2,7 @@
 
 <br />
 Practicing Serverless...
+<br />
 <ul>
-<li>More info about framework at serverless.com</li>
+<li>More info about framework <a href="https://www.serverless.com/">here</a></li>
 </ul>

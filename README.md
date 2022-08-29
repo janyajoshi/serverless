@@ -14,5 +14,5 @@ Practicing Serverless...
 <ul>
 <li>npm install -g serverless</li>
 <li>Download credentials for IAM user</li>
-<li>serverless config credentials --provider aws --key <YOUR_KEY> --secret <YOUR_SECRET> profile <YOUR_USERNAME></li>
+<li>serverless config credentials --provider aws --key YOUR_KEY --secret YOUR_SECRET profile YOUR_USERNAME</li>
 </ul>

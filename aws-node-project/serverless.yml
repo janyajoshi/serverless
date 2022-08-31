@@ -1,0 +1,49 @@
+service: aws-node-project
+
+frameworkVersion: "3"
+
+provider:
+    name: aws
+    runtime: nodejs14.x
+    stage: dev
+    region: ap-south-1
+
+    # Global values for functions, these will be used unless overrided explicitly in function(s)
+    #    timeout: 2
+    #    memorySize: 512
+
+    # iam:
+    #     role:
+    #         statements:
+    #             - Effect: "Allow"
+    #               Action:
+    #                   - "lambda:*"
+    #               Resource:
+    #                   - "*"
+
+    # environment variables
+    # environment:
+    #     var1: val1
+
+    # VPC - Virtual private cloud
+    # vpc:
+    #     securityGroupIds:
+    #         - sgID1
+    #         - sgID2
+    #     subnetIds:
+    #         - sId1
+    #         - sId2
+
+functions:
+    getEnv:
+        handler: handler.getEnv
+        description: Get environment Variables
+    hello-short-timeout:
+        handler: handler.hello
+        description: Short Timeout
+    hello-long-timeout:
+        handler: handler.hello
+        description: Long Timeout
+        # Overriding global values, only for this particular function
+        # timeout: 6
+        # memorySize: 256
